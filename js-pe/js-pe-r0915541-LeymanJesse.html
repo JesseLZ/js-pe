@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Opdracht Form - Jesse Leyman</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container pt-5">
+        <!--https://getbootstrap.com/docs/4.3/components/forms/-->
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Registreer</h1>
+                <!--we returnen false zodat de pagina niet refresht en de alerts zichtbaar blijven, het geeft een foutmelding maar werkt alsnog?
+                https://www.codegrepper.com/code-examples/html/how+to+not+refresh+page+on+form+submit-->                
+                <form onsubmit="return false">
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="inputVoornaam">Voornaam</label>
+                            <input type="text" class="form-control" id="inputVoornaam" placeholder="Uw voornaam" />
+                        </div>
+                        <div class="form-group col">
+                            <label for="inputNaam">Naam</label>
+                            <input type="text" class="form-control" id="inputNaam" placeholder="Uw naam" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputGebr">Gebruikersnaam</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="inputGebr">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">E-mailadres</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="you@example.com" />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="inputWw">Wachtwoord</label>
+                            <input type="password" class="form-control" id="inputWw" />
+                            <small>Je wachtwoord moet minsten 8 tekens lang zijn</small>
+                        </div>
+                        <div class="form-group col ">
+                            <label for="herhaalWw">Herhaal wachtwoord</label>
+                            <input type="password" class="form-control" id="herhaalWw" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAdres">Adres</label>
+                        <input type="text" class="form-control" id="inputAdres" placeholder="Uw adres en huisnummer">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputLand">Land</label>
+                            <select id="inputLand" class="form-control">
+                                <option selected>Kies een land</option>
+                                <option>België</option>
+                                <option>Nederland</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputProv">Provincie</label>
+                            <select id="inputProv" class="form-control">
+                                <option selected>Kies een provincie</option>
+                                <option>Antwerpen</option>
+                                <option>Limburg</option>
+                                <option>Vlaams-Brabant</option>
+                                <option>Oost-Vlaanderen</option>
+                                <option>Henegouwen</option>
+                                <option>Luik</option>
+                                <option>Luxemburg</option>
+                                <option>Namen</option>
+                                <option>Waals-Brabant</option>
+                                <option>Groningen</option>
+                                <option>Friesland</option>
+                                <option>Drenthe</option>
+                                <option>Overijssel</option>
+                                <option>Flevoland</option>
+                                <option>Gelderland</option>
+                                <option>Utrecht</option>
+                                <option>Noord-Holland</option>
+                                <option>Zuid-Holland</option>
+                                <option>Zeeland</option>
+                                <option>Noord-Brabant</option>
+                                <option>Limburg (NL)</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputPost">Postcode</label>
+                            <input type="text" class="form-control" id="inputPost" />
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Betaling</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputRadio1"
+                            value="Banking app">
+                        <label class="form-check-label" for="inputRadio1">Banking app</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputRadio2"
+                            value="Overschrijving">
+                        <label class="form-check-label" for="inputRadio2">Overschrijving</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputRadio3"
+                            value="Visa card">
+                        <label class="form-check-label" for="inputRadio3">Visa card</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputRadio4"
+                            value="PayPal">
+                        <label class="form-check-label" for="inputRadio4">PayPal</label>
+                    </div>
+
+                    <h5 class="pt-3">Hou me op de hoogte</h5>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="inputAkkoord" />
+                        <label class="form-check-label" for="inputAkkoord">Ik ga akkoord met de algemene
+                            voorwaarden</label>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="inputNieuws" />
+                        <label class="form-check-label" for="inputNieuws">Inschrijven voor onze nieuwsbrief</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"
+                        onclick="validateForm()">Indienen</button>
+                </form>
+            </div>
+            <!-- // col-8 -->
+            <div class="col-md-4 pt-4">
+                <!--https://getbootstrap.com/docs/4.6/components/alerts/-->
+                <div class="alert alert-danger" role="alert" id="error">
+                    <h4 class="alert-heading">Error</h4>
+                    <p id="teksterror"></p>
+                </div>
+                <div class="alert alert-success" role="alert" id="success">
+                    <h4 class="alert-heading">Goed gedaan!</h4>
+                    <p>Je bent succesvol geregistreerd</p>
+                </div>
+                <div class="alert alert-info" role="alert" id="betaling">
+                    <h4 class="alert-heading">Betalingswijze</h4>
+                    <p id="tekstbetaling"></p>
+                </div>
+            </div>
+            <!-- // col-4 -->
+        </div>
+        <!-- // row -->
+    </div>
+    <!-- // container -->
+
+    <script>
+        // Start script.
+        let errors = [];
+        //https://stackoverflow.com/questions/6242976/javascript-hide-show-element
+        // alerts verbergen als de pagina laad
+        document.querySelector("#error").style.display = "none";
+        document.querySelector("#success").style.display = "none";
+        document.querySelector("#betaling").style.display = "none";
+
+        function validateForm() {
+            // velden nakijken of ze leeg zijn
+            checkEmptyField("#inputVoornaam", "voornaam");
+            checkEmptyField("#inputNaam", "naam");
+            checkEmptyField("#inputGebr", "gebruikersnaam");
+            checkEmptyField("#inputAdres", "adres");
+            checkEmptyField("#inputLand", "land");
+            checkEmptyField("#inputProv", "provincie");
+
+            //email nakijken
+            if (!validateEmail("#inputEmail")) {
+                errors.push('<p>'+'E-mailadres is niet correct'+ '</p>');
+            }
+
+            //wachtwoord nakijken
+            checkWachtwoord();
+
+            //betaling nakijken
+            validatePayment("#inputRadio1");
+            validatePayment("#inputRadio2");
+            validatePayment("#inputRadio3");
+            validatePayment("#inputRadio4");
+
+            //postcode nakijken
+            checkPC("#inputPost");
+
+            //algemene voorwaarden nakijken
+            //https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
+            if(!document.querySelector("#inputAkkoord").checked){
+                errors.push('<p>'+'U moet de algemene voorwaarden accepteren'+ '</p>');
+            }
+
+            //als er erros zijn, de error alert tonen, indien er geen errors zijn tonen we de succes en betalings alert
+            if (errors.length == 0){
+                document.querySelector("#success").style.display = "block";
+                document.querySelector("#betaling").style.display = "block";
+            }
+            else{
+                //https://thispointer.com/convert-array-to-string-without-comma-in-javascript/#:~:text=Example2%3A%2D-,Convert%20the%20array%20%5B%E2%80%9CJavascript%E2%80%9D%2C%20%E2%80%9CIs%E2%80%9D%2C,without%20commas%20separated%20by%20dash.&text=Explanation%3A%2D-,The%20join()%20method%20is%20used.,and%20printed%20on%20the%20console.
+                let showErrors = errors.join("");
+                document.querySelector("#teksterror").innerHTML += showErrors;
+                document.querySelector("#error").style.display = "block";
+            }
+        }
+
+        function checkEmptyField(veld, melding) {
+            //https://www.codegrepper.com/code-examples/javascript/javascript+check+if+input+is+empty
+            //https://www.quora.com/How-can-I-check-if-there-is-no-option-in-the-dropdown-select-using-JavaScript  
+            if (document.querySelector(veld).value == "" || document.querySelector(veld).value == null || document.querySelector(veld).selectedIndex == 0) {
+                errors.push('<p>'+'Het veld ' + melding + ' is vereist.'+ '</p>');
+                return true;
+            }
+        }
+
+        function validateEmail(emailadres) {
+            //http://zparacha.com/validate-email-address-using-javascript-regular-expression
+            //https://www.codegrepper.com/code-examples/javascript/regex+min+length
+            //https://www.tutorialspoint.com/How-do-I-verify-that-a-string-only-contains-letters-numbers-underscores-and-dashes-in-Python#:~:text=You%20can%20use%20regular%20expressions,9_%2D%5D*%24%22.
+            //https://regexr.com/
+            let mailVal = /^[^.-].{1,}[a-zA-Z0-9_.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return mailVal.test(document.querySelector(emailadres).value);
+        }
+
+        function checkWachtwoord() {
+            let ww = document.querySelector("#inputWw").value;
+            let hw = document.querySelector("#herhaalWw").value;
+
+            //https://stackoverflow.com/questions/3536055/stopping-a-javascript-function-when-a-certain-condition-is-met
+            if (checkEmptyField("#inputWw", "wachtwoord") || checkEmptyField("#herhaalWw", "herhaal wachtwoord")) {
+                return;
+            }
+            if (ww.length < 8) {
+                errors.push('<p>'+'Het wachtwoord moet minstens 8 karakters zijn'+ '</p>');
+                return;
+            }
+            if (ww != hw) {
+                errors.push('<p>'+'Het herhaalde wachtwoord moet overeenkomen met het wachtwoord'+ '</p>');
+                return;
+            }
+        }
+
+        function validatePayment(veld) {
+            //https://stackoverflow.com/questions/1423777/how-can-i-check-whether-a-radio-button-is-selected-with-javascript
+            //https://www.w3schools.com/jsref/prop_radio_checked.asp
+            if (document.querySelector(veld).checked) {
+                document.querySelector("#tekstbetaling").innerHTML += 'Je betalingswijze is ' + document.querySelector(veld).value + '.';             
+            }
+        }
+
+        function checkPC(veld){
+            if (checkEmptyField("#inputPost","postcode")){
+                return;
+            }
+            if (document.querySelector(veld).value <= 1000 || document.querySelector(veld).value > 10000){
+                errors.push('<p>'+'De waarde van postcode moet tussen 1000 en 9999 liggen'+ '</p>');
+                return;
+            }
+        }
+      // Einde script.
+    </script>
+</body>
+
+</html>
